@@ -32,11 +32,6 @@ public class GeoAdapter extends RecyclerView.Adapter<GeoAdapter.ViewHolder> {
         holder.longTextView.setText(String.valueOf(geolocalizacion.getLon()));
     }
 
-    public void setData(List<Geolocalizacion> geolocalizacionList) {
-        this.geolocalizacionList = geolocalizacionList;
-        notifyDataSetChanged();
-    }
-
     @Override
     public int getItemCount() {
         return geolocalizacionList.size();

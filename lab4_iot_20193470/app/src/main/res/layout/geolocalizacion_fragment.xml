@@ -44,6 +44,7 @@
             android:paddingEnd="18dp">
 
             <EditText
+                android:id="@+id/ediTextCity"
                 android:layout_width="260dp"
                 android:layout_height="50dp"
                 android:hint="Ciudad"

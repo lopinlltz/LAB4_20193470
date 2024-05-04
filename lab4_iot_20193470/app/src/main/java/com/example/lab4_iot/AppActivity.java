@@ -21,25 +21,7 @@ public class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_principal);
 
-        recyclerView = findViewById(R.id.fragmentContainerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
 
-        geoApiService = new GeoApiService();
-        loadData();
-    }
-
-    private void loadData() {
-        geoApiService.getGeolocalizaciones("Lima", new GeoApiService.GeoCallback() {
-            @Override
-            public void onSuccess(List<Geolocalizacion> geolocalizaciones) {
-                adapter.setData(geolocalizaciones);
-            }
-
-            @Override
-            public void onError(String message) {
-            }
-        });
     }
 
 }
