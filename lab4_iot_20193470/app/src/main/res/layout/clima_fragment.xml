@@ -44,17 +44,19 @@
             android:paddingEnd="18dp">
 
             <EditText
+                android:id="@+id/latitudEditText"
                 android:layout_width="125dp"
                 android:layout_height="50dp"
-                android:hint="Ciudad"
+                android:hint="Latitud"
                 android:background="@drawable/rounded_searchbar"
                 android:padding="12dp"
                 android:layout_marginEnd="12dp"/>
 
             <EditText
+                android:id="@+id/longitudEditText"
                 android:layout_width="125dp"
                 android:layout_height="50dp"
-                android:hint="Ciudad"
+                android:hint="Longitud"
                 android:background="@drawable/rounded_searchbar"
                 android:padding="12dp"
                 android:layout_marginEnd="12dp"/>
@@ -81,7 +83,7 @@
                 android:layout_gravity="center">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view_geolocalizacion"
+                    android:id="@+id/recycler_view_clima"
                     android:layout_width="match_parent"
                     android:layout_height="405dp" />
             </LinearLayout>

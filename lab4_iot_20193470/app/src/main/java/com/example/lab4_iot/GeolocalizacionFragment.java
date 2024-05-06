@@ -1,6 +1,10 @@
 package com.example.lab4_iot;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,14 +84,18 @@ public class GeolocalizacionFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Geolocalizacion>> call, Throwable t) {
+                //String errorMessage = "Error de red: " + t.getMessage();
                 Toast.makeText(getContext(), "Error de red: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                //Log.e("GeolocalizacionFragment", errorMessage, t);
             }
         });
     }
 
-    private void actualizarRecyclerView(List<Geolocalizacion> geolocalizacionList) {
-        geolocalizacionList.clear();
-        geolocalizacionList.addAll(geolocalizacionList);
+    private void actualizarRecyclerView(List<Geolocalizacion> nuevaLista) {
+        //geolocalizacionList.clear();
+        geolocalizacionList.addAll(nuevaLista);
         adapter.notifyDataSetChanged();
     }
+
+
 }
